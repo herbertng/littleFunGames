@@ -27,3 +27,9 @@ void main() {
     }
 }
 
+// Check if Phaser is available globally and then add the CRTShader to its namespace
+if (window.Phaser) {
+    window.Phaser.CRTShader = CRTShader;
+} else {
+    console.error("Phaser is not loaded yet!");
+}
